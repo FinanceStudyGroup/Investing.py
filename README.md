@@ -46,7 +46,7 @@ after which, we will be prompted for the following data for Investing.com, and p
 
 1. Email address for Investing.com
 2. Password for Investing.com
-3. Mode (Investing.py takes as an argument, one of 72 different modes for collecting different data)
+3. Mode (Investing.py takes as an argument, one of 75 different modes for collecting different data)
 4. Interval (the data collection interval)
 5. Destination folder
 
@@ -68,8 +68,97 @@ In running this download, we can collect the full yield curve on US government b
 leading up to the present date. Not only does this give us immediate access to measures of the risk free rate,
 we can examine in Python or R how these rates may have changed over a recent historical interval.
 
-With the 72 modes of this function, we can collect all yield data available from Investing.com, as well as index
+With the 75 modes of this function, we can collect all yield data available from Investing.com, as well as index
 prices and a given watchlist of equities, for use in risk analysis and valuation.
 
 Any of the modes provided can easily be modified within Python, but our aim was to provide the broadest possible set of
 coverage for the likely range of use cases within the valuation and investment research workflow.
+
+-----------------------------------------------------------------------------------------------------------------
+# Modes
+Function modes are based on the International Organization for Standardization's ISO 3166-1 standard (specifically alpha-2,
+and alpha-3), two- and three-digit alphabetical codes for denoting the names of countries.
+Using these codes, we have defined a set of different modes for downloading various pieces of data from Investing.com.
+These modes are listed below.
+
+By providing the alpha-2 code for the mode of the function, we can download bond yields on for the given country,
+formatted according to the alpha-3 code.
+
+Additional modes include, "Watchlist," "Indices," "ETF," and "Bonds," where the "Bonds" mode provides the available set of 
+1-, 5-, and 10-year yields on the set of countries having those maturities in common.
+
+-----------------------------------------------------------------------------------------------------------------
+
+| Alpha-2 | Alpha-3 | Country                                              |
+|---------|---------|------------------------------------------------------|
+| AR      | ARG     | Argentina                                            |
+| AU      | AUS     | Australia                                            |
+| AT      | AUT     | Austria                                              |
+| BH      | BHR     | Bahrain                                              |
+| BD      | BGD     | Bangladesh                                           |
+| BE      | BEL     | Belgium                                              |
+| BW      | BWA     | Botswana                                             |
+| BR      | BRA     | Brazil                                               |
+| BG      | BGR     | Bulgaria                                             |
+| CA      | CAN     | Canada                                               |
+| CL      | CHL     | Chile                                                |
+| CN      | CHN     | China                                                |
+| CO      | COL     | Colombia                                             |
+| HR      | HRV     | Croatia                                              |
+| CZ      | CZE     | Czechia                                              |
+| DK      | DNK     | Denmark                                              |
+| EG      | EGY     | Egypt                                                |
+| FI      | FIN     | Finland                                              |
+| FR      | FRA     | France                                               |
+| DE      | DEU     | Germany                                              |
+| GR      | GRC     | Greece                                               |
+| HK      | HKG     | Hong Kong                                            |
+| HU      | HUN     | Hungary                                              |
+| IS      | ISL     | Iceland                                              |
+| IN      | IND     | India                                                |
+| ID      | IDN     | Indonesia                                            |
+| IE      | IRL     | Ireland                                              |
+| IL      | ISR     | Israel                                               |
+| IT      | ITA     | Italy                                                |
+| JP      | JPN     | Japan                                                |
+| JO      | JOR     | Jordan                                               |
+| KE      | KEN     | Kenya                                                |
+| LV      | LVA     | Latvia                                               |
+| LT      | LTU     | Lithuania                                            |
+| MY      | MYS     | Malaysia                                             |
+| MT      | MLT     | Malta                                                |
+| MU      | MUS     | Mauritius                                            |
+| MX      | MEX     | Mexico                                               |
+| MA      | MAR     | Morocco                                              |
+| NA      | NAM     | Namibia                                              |
+| NL      | NLD     | Netherlands                                          |
+| NZ      | NZL     | New Zealand                                          |
+| NG      | NGA     | Nigeria                                              |
+| NO      | NOR     | Norway                                               |
+| PK      | PAK     | Pakistan                                             |
+| PE      | PER     | Peru                                                 |
+| PH      | PHL     | Philippines                                          |
+| PL      | POL     | Poland                                               |
+| PT      | PRT     | Portugal                                             |
+| QA      | QAT     | Qatar                                                |
+| RO      | ROU     | Romania                                              |
+| RU      | RUS     | Russian Federation                                   |
+| RS      | SRB     | Serbia                                               |
+| SG      | SGP     | Singapore                                            |
+| SK      | SVK     | Slovakia                                             |
+| SI      | SVN     | Slovenia                                             |
+| ZA      | ZAF     | South Africa                                         |
+| KR      | KOR     | Korea, Republic of                                   |
+| ES      | ESP     | Spain                                                |
+| LK      | LKA     | Sri Lanka                                            |
+| SE      | SWE     | Sweden                                               |
+| CH      | CHE     | Switzerland                                          |
+| TW      | TWN     | Taiwan, Province of China                            |
+| TH      | THA     | Thailand                                             |
+| TR      | TUR     | Turkey                                               |
+| UG      | UGA     | Uganda                                               |
+| UA      | UKR     | Ukraine                                              |
+| GB      | GBR     | United Kingdom of Great Britain and Northern Ireland |
+| US      | USA     | United States of America                             |
+| VE      | VEN     | Venezuela, Bolivarian Republic of                    |
+| VN      | VNM     | Viet Nam                                             |
