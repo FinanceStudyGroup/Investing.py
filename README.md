@@ -81,7 +81,7 @@ and alpha-3), two- and three-digit alphabetical codes for denoting the names of 
 Using these codes, we have defined a set of different modes for downloading various pieces of data from Investing.com.
 These modes are listed below.
 
-By providing the alpha-2 code for the mode of the function, we can download bond yields on for the given country,
+By providing the alpha-2 code for the mode of the function, we can download bond yields on the given country,
 formatted according to the alpha-3 code.
 
 Additional modes include, "Watchlist," "Indices," "ETF," and "Bonds," where the "Bonds" mode provides the available set of 
